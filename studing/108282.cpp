@@ -15,58 +15,82 @@ typedef struct stack stack;
 
 void init(stack *stack)
 {
-    stack->prev = NULL;
-    stack->data = 0;
-    stack->next = NULL;
+    if (stack != NULL)
+    {
+        stack->prev = NULL;
+        stack->data = 0;
+        stack->next = NULL;
+    }
 }
 
 stack *head(stack *stacks)
 {
-    stack *temp1 = (stack *)malloc(sizeof(stack));
-    temp1 = stacks;
-    while (temp1->prev != NULL)
+    stack *temp1 = stacks;
+    if (temp1 != NULL)
     {
-        temp1 = temp1->prev;
+        while (temp1->prev != NULL)
+        {
+            temp1 = temp1->prev;
+        }
     }
-
     return temp1;
 }
 
 stack *tail(stack *stacks)
 {
-     stack *temp1 = (stack *)malloc(sizeof(stack));
-    temp1 = stacks;
-    while (temp1->next != NULL)
+    stack *temp1 = stacks;
+    if (temp1 != NULL)
     {
-        temp1 = temp1->prev;
+        while (temp1->next != NULL)
+        {
+            temp1 = temp1->next;
+        }
     }
-
     return temp1;
 }
 
 int pushx(stack *stacks, int x)
 {
-    stack *temp1 = (stack *)malloc(sizeof(stack));
-    init(temp1);
-    temp1->prev = tail(stacks);
-    tail(stacks)->next = temp1;
-
-    temp1->data = x;
-
+    if (stacks != NULL)
+    {
+        stack *temp1 = (stack *)malloc(sizeof(stack));
+        init(temp1);
+        temp1->prev = tail(stacks);
+        tail(stacks)->next = temp1;
+        temp1->data = x;
+    }
+    
+    else if (stacks == NULL)
+    {
+        stack *temp1 = (stack *)malloc(sizeof(stack));
+        init(temp1);
+        temp1->data = x;
+        stacks = temp1;
+    }
+    
     return 0;
 }
 // 정수 X를 스택에 넣는 연산이다.
+
 int pop(stack *stacks)
 {
-
-    printf("%d\n", tail(stacks)-> data);
-
-    init(tail(stacks));
-    (tail(stacks)->prev)->next == NULL;
-
+    if (stacks != NULL)
+    {
+        printf("%d\n", tail(stacks)->data);
+        stack *temp1 = tail(stacks);
+        temp1->prev->next = NULL;
+        init(temp1);
+        free(temp1);
+    }
+    else
+    {
+        printf("-1\n");
+    }
     return 0;
 }
-// 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다. 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+// 스택에서 가장 위에 있는 정수를 빼고,
+// 그 수를 출력한다. 만약 스택에
+// 들어있는 정수가 없는 경우에는 -1을 출력한다.
 
 int size(stack *stacks)
 {
@@ -75,24 +99,27 @@ int size(stack *stacks)
         printf("0\n");
         return 0;
     }
-
-    int count = 1;
-    stack *temp1 = (stack *)malloc(sizeof(stack));
-    temp1 = head(stacks);
-
-    while (1)
+    else
     {
-        if (temp1->next == NULL)
-            break;
-        else{
-        temp1 = temp1->next;
-        count++;
+        int count = 1;
+        stack *temp1 = (stack *)malloc(sizeof(stack));
+        temp1 = head(stacks);
+
+        while (1)
+        {
+            if (temp1->next == NULL)
+                break;
+            else
+            {
+                temp1 = temp1->next;
+                count++;
+            }
         }
+
+        printf("%d", count);
+
+        return 0;
     }
-
-    printf("%d", count);
-
-    return 0;
 }
 // 스택에 들어있는 정수의 개수를 출력한다.
 int empty(stack *stacks)
@@ -110,7 +137,7 @@ int empty(stack *stacks)
 // 스택이 비어있으면 1, 아니면 0을 출력한다.
 int top(stack *stacks)
 {
-    if (size(stacks) == 0)
+    if (head(stacks) == NULL)
         printf("-1\n");
     else
         printf("%d", tail(stacks)->data);
@@ -129,8 +156,7 @@ int main()
     int N;
     scanf("%d", &N);
 
-    struct stack *stacks;
-    init(stacks);
+    stack *stacks = NULL;
 
     for (int a = 0; a < N; a++)
     {
@@ -143,19 +169,19 @@ int main()
             scanf("%d", &x);
             pushx(stacks, x);
         }
-        else if (0 ==  strcmp(command, "pop"))
+        else if (0 == strcmp(command, "pop"))
         {
             pop(stacks);
         }
-        else if (0 ==  strcmp(command, "size"))
+        else if (0 == strcmp(command, "size"))
         {
             size(stacks);
         }
-        else if (0 ==  strcmp(command, "empty"))
+        else if (0 == strcmp(command, "empty"))
         {
             empty(stacks);
         }
-        else if (0 ==  strcmp(command, "top"))
+        else if (0 == strcmp(command, "top"))
         {
             top(stacks);
         }

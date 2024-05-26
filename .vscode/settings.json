@@ -2,5 +2,6 @@
     "files.associations": {
         "ostream": "cpp",
         "math.h": "c"
-    }
+    },
+    "github.copilot.inlineSuggest.enable": false
 }
