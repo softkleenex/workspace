@@ -1,7 +1,11 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "math.h": "c"
+        "math.h": "c",
+        "stdio.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
     },
     "github.copilot.inlineSuggest.enable": false
 }

@@ -8,80 +8,86 @@
 typedef struct
 {
     int *data; // 스택 데이터를 저장할 배열
-    int front;
-    int top;   // 스택의 최상위 원소의 인덱스
+    int front; // 스택의 가장 앞 원소의 인덱스 pop
+    int top;   // 스택의 최상위 원소의 인덱스  push
 } stack;
 
 stack *init()
 {
     stack *stacks = (stack *)malloc(sizeof(stack));
     stacks->data = (int *)calloc(10000, sizeof(int));
-    stacks->top = -1;
-    stacks->front = -1;
+    stacks->top = 0;
+    stacks->front = 0;
     return stacks;
 }
 
 // 정수 X를 스택에 넣는 연산이다.
 void push(stack *stacks, int x)
 {
-    if(stacks -> top == stacks -> front)
-        {
-            
-    }
+    
+    stacks->data[stacks->top] = x;
+    stacks->top++;
 }
 
-// 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다.
+// 스택에서 가장 앞에 있는 정수를 빼고, 그 수를 출력한다.
 // 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
 void pop(stack *stacks)
 {
-    if (stacks->top != -1)
+    if (stacks->front == stacks->top)
     {
-        printf("%d\n", stacks->data[stacks->front]);
-        stacks->data[stacks->front] = -1;
-        stacks->top++;
+        printf("-1\n");
     }
     else
-        printf("-1\n");
+    {
+        printf("%d\n", stacks->data[stacks->front]);
+        stacks->front++;
+    }
 }
 
 // 스택에 들어있는 정수의 개수를 출력한다.
 void size(stack *stacks)
 {
     int size = 0;
-    printf("%d\n", size );
+    if (stacks->front <= stacks->top)
+    {
+        printf("%d\n", stacks->top - stacks->front);
+    }
 }
 
-// 스택이 비어있으면 1, 아니y면 0을 출력한다.
+// 스택이 비어있으면 1, 아니/ 0을 출력한다.
 void empty(stack *stacks)
 {
-    if (stacks -> top == stacks -> front)
-        printf("0\n");
-    else
+    if (stacks->top == stacks->front)
         printf("1\n");
+    else
+        printf("0\n");
 }
 
-// 스택의 가장 위에 있는 정수를 출력한다.
+// 스택의 가장 앞에 있는 정수를 출력한다.
 // 만약 스택에 들어있는 정수가 없는 경우에는 -1을 출력한다.
 void front(stack *stacks)
 {
-    if (stacks->top == stacks -> front)
+    if (stacks->top == stacks->front)
+    {
+        printf("%d\n", -1);
+    }
+    else
     {
         printf("%d\n", stacks->data[stacks->front]);
-        stacks -> front++;
     }
-    else
-        printf("%d\n", -1);
 }
-//큐의 가장 뒤에 있는 정수를 출력한다. 
-//만약 큐에 들어있는 정수가 없는 경우에는 -1을 출력한다.
-void back(stack *stacks){
-   if (stacks->top == stacks -> front)
+// 큐의 가장 뒤에 있는 정수를 출력한다.
+// 만약 큐에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+void back(stack *stacks)
+{
+    if (stacks->front == stacks->top)
     {
-        printf("%d\n", stacks->data[stacks->top]);
-        stacks -> top--;
+        printf("%d\n", -1);
     }
     else
-        printf("%d\n", -1);
+    {
+        printf("%d\n", stacks->data[stacks->top-1]);
+    }
 }
 
 int main()
@@ -124,7 +130,7 @@ int main()
         {
             command[a] = 4;
         }
-        else if(0 == strncmp(temp1, "back", 4))
+        else if (0 == strncmp(temp1, "back", 4))
         {
             command[a] = 5;
         }
@@ -161,7 +167,7 @@ int main()
             front(stacks);
             break;
         }
-         case (5):
+        case (5):
         {
             back(stacks);
             break;
