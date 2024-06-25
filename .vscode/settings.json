@@ -5,7 +5,9 @@
         "stdio.h": "c",
         "array": "c",
         "string": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "stdlib.h": "c"
     },
-    "github.copilot.inlineSuggest.enable": false
+    "github.copilot.inlineSuggest.enable": false,
+    "C_Cpp.errorSquiggles": "disabled"
 }
