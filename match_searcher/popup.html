@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 10px; width: 350px; }
+        input { margin-bottom: 10px; width: calc(100% - 20px); padding: 10px; }
+        .buttons { display: flex; justify-content: space-between; }
+        button { width: 48%; padding: 10px; margin-bottom: 10px; }
+        .lens-btn { margin-left: 10px; }
+        .toggle-btn { position: relative; margin-top: 10px; cursor: pointer; }
+        .extra-content { display: none; }
+        .visible { display: block; }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputString" placeholder="Enter your string here" />
+    <div class="buttons">
+        <button id="generateUrl">Search!</button>
+        <button class="lens-btn" id="lensSearch">Lens!</button>
+    </div>
+    <div class="toggle-btn">&#9660;</div>
+    <div class="extra-content">
+        <textarea id="searchRule1" rows="2" style="width: calc(100% - 20px);">https://www.op.gg/multisearch/kr?summoners=</textarea>
+        <textarea id="searchRule2" rows="2" style="width: calc(100% - 20px);">https://www.op.gg/summoners/search?q=</textarea>
+        <p>Creator: softkleenex1217@gmail.com</p>
+        <p>Guide: </p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
