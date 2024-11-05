@@ -1,0 +1,1 @@
+{"name":"Local: 1991","url":"d:\\my_note2_openthis\\studing\\1991.c","tests":[{"id":1730806374804,"input":"7\nA B C\nB D .\nC E F\nE . .\nF . G\nD . .\nG . .","output":"ABDCEFG\nDBAECFG\nDBEGFCA"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\my_note2_openthis\\studing\\1991.c","group":"local","local":true}
