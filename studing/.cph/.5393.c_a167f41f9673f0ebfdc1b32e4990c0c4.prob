@@ -1,0 +1,1 @@
+{"name":"Local: 5393","url":"d:\\my_note2_openthis\\studing\\5393.c","tests":[{"id":1731329362731,"input":"3\n12\n240\n3600","output":"10\n200\n3000"},{"id":1731419280461,"input":"1\n5","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\my_note2_openthis\\studing\\5393.c","group":"local","local":true}

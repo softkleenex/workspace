@@ -1,0 +1,1 @@
+{"name":"Local: 1100","url":"d:\\my_note2_openthis\\studing\\1100.c","tests":[{"id":1731420886768,"input":".F.F...F\nF...F.F.\n...F.F.F\nF.F...F.\n.F...F..\nF...F.F.\n.F.F.F.F\n..FF..F.","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\my_note2_openthis\\studing\\1100.c","group":"local","local":true}
