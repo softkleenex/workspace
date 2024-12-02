@@ -315,7 +315,7 @@
         if (-1 == bfs_SpanningTree(arr, v))
             break;
         }
-        printf("end");
+
 
         free(visited);
 

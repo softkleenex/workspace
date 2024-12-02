@@ -1,0 +1,11 @@
+10
+phil 80
+claire 90
+haley 60
+alex 100
+luke 60
+manny 85
+jay 100
+mitchell 75
+didi 50
+cameron 40
