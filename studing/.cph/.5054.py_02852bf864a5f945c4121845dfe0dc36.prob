@@ -1,0 +1,1 @@
+{"name":"Local: 5054","url":"/Users/isangjae/workspace/studing/5054.py","tests":[{"id":1739189290080,"input":"2\n4\n24 13 89 37\n6\n7 30 41 14 39 42","output":"152\n70"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studing/5054.py","group":"local","local":true}
