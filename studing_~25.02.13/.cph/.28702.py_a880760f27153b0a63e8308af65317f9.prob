@@ -1,0 +1,1 @@
+{"name":"Local: 28702","url":"/Users/isangjae/workspace/studing/28702.py","tests":[{"id":1739350867865,"input":"Fizz\nBuzz\n11","output":"Fizz"},{"id":1739350874473,"input":"980803\n980804\nFizzBuzz","output":"980806"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studing/28702.py","group":"local","local":true}

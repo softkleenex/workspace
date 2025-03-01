@@ -1,0 +1,1 @@
+{"name":"Local: 20154","url":"/Users/isangjae/workspace/studying_25.02.13~/20154.py","tests":[{"id":1740550479759,"input":"ABCDE","output":"I'm a winner!"},{"id":1740550484184,"input":"AECF","output":"You're the winner?"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studying_25.02.13~/20154.py","group":"local","local":true}

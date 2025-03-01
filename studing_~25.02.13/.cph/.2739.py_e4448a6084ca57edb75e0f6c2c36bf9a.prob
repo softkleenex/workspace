@@ -1,0 +1,1 @@
+{"name":"Local: 2739","url":"/Users/isangjae/workspace/studing/2739.py","tests":[{"id":1739345016589,"input":"2","output":"2 * 1 = 2\n2 * 2 = 4\n2 * 3 = 6\n2 * 4 = 8\n2 * 5 = 10\n2 * 6 = 12\n2 * 7 = 14\n2 * 8 = 16\n2 * 9 = 18"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studing/2739.py","group":"local","local":true}
