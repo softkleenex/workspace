@@ -17,6 +17,7 @@ x = int(input())
 
 
 list1 = [float('inf')] * (x + 1)
+
 list1[1] = 0
 
 for i in range(2, len(list1)):
