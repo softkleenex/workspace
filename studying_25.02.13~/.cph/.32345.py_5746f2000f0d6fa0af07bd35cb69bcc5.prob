@@ -1,0 +1,1 @@
+{"name":"Local: 32345","url":"/Users/isangjae/workspace/studying_25.02.13~/32345.py","tests":[{"id":1742209464472,"input":"3\nhongik\nhicon\nrhythm","output":"3\n2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studying_25.02.13~/32345.py","group":"local","local":true}
