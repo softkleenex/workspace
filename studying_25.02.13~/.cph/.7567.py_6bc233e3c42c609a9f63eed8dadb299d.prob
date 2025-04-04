@@ -1,0 +1,1 @@
+{"name":"Local: 7567","url":"/Users/isangjae/workspace/studying_25.02.13~/7567.py","tests":[{"id":1742958953735,"input":"((((","output":"25"},{"id":1742958964384,"input":"()()()))(","output":"80"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studying_25.02.13~/7567.py","group":"local","local":true}

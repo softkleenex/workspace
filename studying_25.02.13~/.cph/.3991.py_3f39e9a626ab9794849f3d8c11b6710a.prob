@@ -1,0 +1,1 @@
+{"name":"Local: 3991","url":"/Users/isangjae/workspace/studying_25.02.13~/3991.py","tests":[{"id":1743049468318,"input":"3 5 3\n4 4 7","output":"31233\n12211\n33233"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studying_25.02.13~/3991.py","group":"local","local":true}
