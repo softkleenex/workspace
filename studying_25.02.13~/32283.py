@@ -42,3 +42,34 @@
 # # 22
 # https://www.acmicpc.net/problem/32283
 
+
+import sys
+
+input = sys.stdin.readline
+
+n = int(input())
+s = int(input(), 2)
+
+
+
+
+
+
+list1 = []
+
+for i in range(0, 2**n):
+    list1.append(i)    
+
+
+
+
+
+list1.sort(key = lambda x : (bin(x).count('1'),    bin(x)[::-1] ) )
+
+
+list2 = [f'0b{i :0{n}b}' for i in list1]
+
+#print(*list2, sep = '\n')
+
+print(list1.index(s))
+

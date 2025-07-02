@@ -1,0 +1,1 @@
+{"name":"Local: 2025kaist1","url":"/Users/isangjae/workspace/studying_25.02.13~/2025kaist1.py","tests":[{"id":1746946734275,"input":"4\n1\n2\n5\n10","output":"1\n5\n113\n18413"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/isangjae/workspace/studying_25.02.13~/2025kaist1.py","group":"local","local":true}
